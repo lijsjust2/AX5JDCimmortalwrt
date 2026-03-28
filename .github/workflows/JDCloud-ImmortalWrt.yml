@@ -1,10 +1,11 @@
 name: JDCloud-ImmortalWrt
 
 on:
-  workflow_dispatch:
-  workflow_call:
-  # schedule:
-  #   - cron: 0 20 * * *
+  push:
+    branches: [ master ]  # 推送到master分支时自动触发
+  pull_request:
+    branches: [ master ]  # PR到master分支时触发
+  workflow_dispatch:  # 【关键】允许手动触发，添加后立刻出现在Actions列表
 
 env:
   REPO_URL: https://github.com/laipeng668/immortalwrt.git
