@@ -1,5 +1,8 @@
 name: JDCloud-ImmortalWrt
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ master ]  # 推送到master分支时自动触发
